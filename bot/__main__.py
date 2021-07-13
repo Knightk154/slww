@@ -36,15 +36,21 @@ def stats(update, context):
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
     stats = f'<b>Bot Uptime ⌚:</b> {currentTime}\n' \
-            f'<b>Start Time ⏱:</b> {current}\n' \
+           
+    f'<b>Start Time ⏱:</b> {current}\n' \
             f'<b>Total Disk Space 🗄️:</b> {total}\n' \
-            f'<b>Used🗃️:</b> {used}  ' \
+           
+    f'<b>Used🗃️:</b> {used}  ' \
+    
             f'<b>Free 🛒:</b> {free}\n\n' \
-            f'🗃️Data Usage🗃️\n<b>Upload ⏫:</b> {sent}\n' \
+            
+    f'🗃️Data Usage🗃️\n<b>Upload ⏫:</b> {sent}\n' \
             f'<b>Download ⏬:</b> {recv}\n\n' \
-            f'<b>CPU 🖥:</b> {cpuUsage}%\n' \
+            
+    f'<b>CPU 🖥:</b> {cpuUsage}%\n' \
             f'<b>RAM 💿 :</b> {memory}%\n' \
-            f'<b>DISK 💽 :</b> {disk}%'
+            
+    f'<b>DISK 💽 :</b> {disk}%'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -61,7 +67,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
     uptime = get_readable_time((time.time() - botStartTime))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         if update.message.chat.type == "private" :
-            sendMessage(f"Hey I'm Alive 🙂\nSince: <code>{uptime}</code>", context.bot, update)
+            sendMessage(f"Hey I'm Alive.. 🙂\nSince: <code>{uptime}</code>", context.bot, update)
         else :
             update.effective_message.reply_photo(IMAGE_URL, start_string, parse_mode=ParseMode.MARKDOWN, reply_markup=reply_markup)
     else :
