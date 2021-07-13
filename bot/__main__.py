@@ -40,7 +40,7 @@ def stats(update, context):
             f'<b>Total Disk Space ---🗄️:</b> {total}\n' \
             f'<b>Used 🗃️:</b> {used}  ' \
             f'<b>Free 🛒:</b> {free}\n\n' \
-            f'🗃️--Data Usage--🗃️\n<b>Upload ----- ⏫:</b> {sent}\n' \
+            f'🗃️--Data Usage--🗃️\n<b>Upload --------- ⏫:</b> {sent}\n' \
             f'<b>Download --- ⏬:</b> {recv}\n\n' \
             f'<b> CPU -------- 🖥:</b> {cpuUsage}%\n' \
             f'<b> RAM -----------------💽:</b> {memory}%\n' \
